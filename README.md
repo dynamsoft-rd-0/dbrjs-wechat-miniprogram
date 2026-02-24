@@ -1,5 +1,7 @@
 # dynamsoft barcode reader JS for wechat miniprogram
 
+This project is developed based on dbrjs 11.2.5000.
+
 ## Fastest way to test in a real mobile
 
 You can replace `appid` as your `test account` in `project.config.json` file. Then restart `WeChat Developer Tools` for the changes to take effect.
