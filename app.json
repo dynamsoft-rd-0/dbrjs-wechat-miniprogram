@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subpackages": [
+    {
+      "root": "barcode-reader-sample",
+      "name": "barcode-reader-sample",
+      "pages": [
+        "pages/test/index"
+      ]
+    },
+    {
+      "root": "dbr",
+      "name": "dbr",
+      "pages": [
+      ]
+    },
+    {
+      "root": "dbr-ai-model",
+      "name": "dbr-ai-model",
+      "pages": [
+      ]
+    }
+  ],
+  "lazyCodeLoading": "requiredComponents",
+  "~~~~__usePrivacyCheck__": true,
+  "permission": {
+    "scope.camera": {
+      "desc": "Scan Barcode"
+    }
+  },
+  "~~~requiredBackgroundModes": [
+    "camera"
+  ],
+  "workers": {
+    "path": "workers",
+    "isSubpackage": true
+  },
+  "resolveAlias": {
+    "@dbr/*": "dbr/*",
+    "@dbr-ai-model/*": "dbr-ai-model/*"
+  }
+}

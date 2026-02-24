@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view>
+  <button wx:if="{{!bPlayingVideo}}" type="primary" bind:tap="decodeImage">decode from image</button>
+  <button wx:if="{{!bPlayingVideo}}" type="primary" bind:tap="startDecodeVideo">decode from video (emulator cannot work, pls use in real mobile)</button>
+  <button wx:if="{{bPlayingVideo}}" type="primary" bind:tap="stopDecodeVideo">stop decoding</button>
+  <view wx:if="{{bPlayingVideo}}" class="camera-wrapper">
+    <camera resolution="high" frame-size="large" bindstop="onCameraStopUnexpectly" binderror="onCameraPermissionError"></camera>
+    <canvas id='cvs-cover-on-camera' type="2d"></canvas>
+  </view>
+
+  <view wx:for="{{resultTxts}}"> {{item}} </view>
+</view>
